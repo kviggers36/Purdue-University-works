@@ -1,0 +1,177 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    margin: 0;
+    padding: 0;
+    background-color: #0D1E40;
+}
+
+header {
+    background-color: #000000;
+    color: #F2F0C9;
+    padding: 20px;
+}
+
+header h1 {
+    text-align:center;
+    margin: 0;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #F2F0C9;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    
+}
+
+section {
+    margin-bottom: 20px;
+    color: #F2F0C9;
+}
+
+footer {
+    background-color: #000000;
+    color: #F2F0C9;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+}
+
+.flip-card-front img, .flip-card-back img {
+    max-width: 100%;
+    max-height: 75%;
+}
+
+.flip-card-front {
+    background-color: #000000;
+    color: #F2F0C9;
+}
+
+.flip-card-back {
+    background-color: #F21D6B;
+    color: #F2F0C9;
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.food-buttons {
+    display: flex;
+}
+
+.food-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F21D6B;
+    color: #F2F0C9;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.food-buttons button img {
+    width: 160px;
+    height: 160px; 
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-box {
+    width: 30%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    header {
+        font-size: 24px;
+    }
+
+    .contact-box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }  
+    
+    .food-buttons {
+        flex-direction: column;
+    }   
+
+    .food-buttons button {
+        font-size: 18px;
+    }
+    .food-list li {
+        font-size: 14px;
+    }
+   
+    .Footer{
+        font-size: 10px;
+    }
+
+} 
